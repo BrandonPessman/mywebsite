@@ -1,10 +1,13 @@
-const express = require('express')
-const app = express()
+var express = require('express');
+var app = express();
+var router = express.Router();
 
-app.get('/', (req, res) => {
-    res.send('Hey, I\'m a Node.js app!')
-})
+router.get('/', (req, res) => {
+    res.sendFile('/root/mywebsite/index.html');
+});
 
-app.listen(3000, () => {
-    console.log('Server is up on 3000')
-})
+app.use("/",router);
+
+app.listen(3000,function() {
+	console.log("Live at Port 3000");
+});
