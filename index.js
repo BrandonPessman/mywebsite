@@ -3,7 +3,11 @@ var app = express();
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    res.sendFile('/root/mywebsite/index.html');
+    res.sendFile(__dirname + '/index.html');
+});
+
+router.get('/', (req, res) => {
+	res.sendFile(__dirname +'/linkupload.html');
 });
 
 app.use("/",router);
