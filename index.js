@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-router.get('/', (req, res) => {
-	res.sendFile(__dirname +'/linkupload.html');
+router.get('/linkupload', (req, res) => {
+	res.sendFile(__dirname + '/linkupload.html');
 });
 
 app.use("/",router);
