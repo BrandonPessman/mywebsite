@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+nav a {
+  margin: 10px;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: #2f2f2f;
+  color: white;
+}
+.container {
+  min-height: 100%;
+}
