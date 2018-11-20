@@ -1,72 +1,31 @@
-<html>
-	<head>
-		<title> DevStuff </title>
-		<style>
-			body {
-				font-family: Sans-serif;
-				overflow: hidden;			
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DevStuff</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			h1 {
-				margin-left: 5%;
-			}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
 
-			nav {
-				padding-top: 5px;
-				padding-bottom: 10px;
-				margin-bottom: 30px;
-				background-color: #ba2c2c;
-				width: 95%;
-				animation: fadein .5s;
-				border-style: outset;
-				border-width: 8px;
-				border-color: #8e2323;
-			}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-			nav a {
-				padding-bottom: 10px;
-				padding-left: 30px;
-				padding-right: 30px;
-				padding-top: 5px;
-				color: white;
-				font-size: 36px;
-				text-decoration: none;
-			}
+</head>
+<body>
 
-			nav a:hover {
-				background-color: #8e2323;
-				transition: .45s;
-				animation: buttonhover 1s forwards;
-			}
+<div class="container">
+  <center><nav>
+    <a href="/"> Home </a>
+    <a href="/about"> About </a>
+    <a href="/blog"> Blog </a>
+    <a href="/projects"> Projects </a>
+    <a href="/resume"> Resume </a>
+    <a href=""> SVG_Lab </a>
+  </nav></center>
+  <h1>Homepage</h1>
+  <p>This part is inside a .container class.</p>
+</div>
 
-			@keyframes buttonhover {
-				from { padding-right: 30px; padding-left: 30px; }
-				to { padding-right: 40px; padding-left: 40px;}
-			}
-
-			@keyframes fadein {
-				from { opacity: 0.2; }
-				to { opacity: 1; }
-			}
-
-			@keyframes spreadout {
-				from { 
-					padding-right: 30px;
-				}
-				to {
-					padding-right: 45px;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<center><nav>
-			<a href=""> About </a>
-			<a href=""> Blog </a>
-			<a href=""> Projects </a>
-			<a href=""> Resume </a>
-			<a href=""> SVG_Lab </a>
-		</nav></center>
-		<h1> Hello, World! </h1>
-	</body>
+</body>
 </html>
