@@ -5,11 +5,16 @@ nav a {
   margin: 10px;
 }
 
+nav a:hover {
+  color: purple;
+  transition: .45s;
+}
+
 .footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   position: relative;
-  height: 50px;
+  height: 100px;
   right: 0;
   bottom: 0;
   left: 0;

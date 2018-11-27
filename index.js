@@ -28,6 +28,10 @@ router.get('/resume', (req, res) => {
 	res.sendFile(__dirname + '/front/resume.html');
 });
 
+router.get('/gapl', (req, res) => {
+	res.sendFile(__dirname + '/front/gapl.html');
+});
+
 app.use("/",router);
 
 app.listen(3000,function() {
