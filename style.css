@@ -28,16 +28,21 @@ nav a:hover {
   font-weight: bold;
 }
 
-.navbar-link {
+.nav-link {
   color: #ffffff
 }
 
-.navbar-link:hover {
+.nav-link:hover {
   text-decoration: none;
   color: #7289da;
   transition: .45s;
 }
 
+.dropdown-menu a:hover {
+  color: #7289da;
+  background-color: rgba(0,0,0,0);
+  transition: .45s;
+}
 .dropdown-item:hover {
   transition: .45s;
   color: #7289da;
