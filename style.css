@@ -10,13 +10,24 @@
   background-color: #f9f9f9;
   padding-top: 40px;
   padding-bottom: 40px;
+  width: 100%;
+  float: left;
 }
 
 h1 {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
   letter-spacing: 0.3em;
   font-family: 'Open Sans', sans-serif;
 }
@@ -34,7 +45,7 @@ p {
   background-color: #4f5872;
   padding-left: 25%;
   padding-right: 25%;
-  min-height: 400px;
+  padding-bottom: 50px;
   margin: 0;
   display: block;
   width: 100%;
@@ -42,7 +53,7 @@ p {
 }
 
 .about {
-  min-height: 1000px;
+  min-height: 200px;
   background-color: #af4949;
   padding-top: 50px;
   color: white;
@@ -55,7 +66,7 @@ p {
 
 .resume {
   padding-top: 50px;
-  min-height: 1000px;
+  min-height: 200px;
   background-color: #c6c6c6;
   margin: 0;
   width: 100%;
@@ -67,7 +78,7 @@ p {
 
 .project {
   padding-top: 50px;
-  min-height: 1000px;
+  min-height: 200px;
   background-color: #d8d8d8;
   margin: 0;
   width: 100%;
