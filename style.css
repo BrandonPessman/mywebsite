@@ -1,66 +1,102 @@
-html, body {
-  height: 100%;
-  background-color: 	#2c2f33;
-  color: #ffffff;
+.myname-logo {
+  color: black;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #f9f9f9;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 h1 {
-  color: #99aab5
-}
-
-nav a {
-  margin: 10px;
-}
-
-nav a:hover {
-  color: #7289da;
-
-}
-
-.navbar {
-  background-color: #23272a;
-  margin-bottom: 36px;
-}
-
-.navbar-brand {
-  color: #7289da;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-link {
-  color: #ffffff
-}
-
-.nav-link:hover {
-  text-decoration: none;
-  color: #7289da;
-  transition: .45s;
-}
-
-.dropdown-menu a:hover {
-  color: #7289da;
-  background-color: rgba(0,0,0,0);
-  transition: .45s;
-}
-.dropdown-item:hover {
-  transition: .45s;
-  color: #7289da;
-}
-
-.footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  position: relative;
-  height: 100px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  text-transform: uppercase;
   text-align: center;
-  background-color: #23272a;
-  color: white;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  font-family: 'Open Sans', sans-serif;
 }
-.container {
-  min-height: 100%;
+
+p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.intro {
+  padding-top: 150px;
+  color: white;
+  background-color: #4f5872;
+  padding-left: 25%;
+  padding-right: 25%;
+  min-height: 400px;
+  margin: 0;
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.about {
+  min-height: 1000px;
+  background-color: #af4949;
+  padding-top: 50px;
+  color: white;
+  margin: 0;
+  width: 100%;
+  float: left;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.resume {
+  padding-top: 50px;
+  min-height: 1000px;
+  background-color: #c6c6c6;
+  margin: 0;
+  width: 100%;
+  float: left;
+  color: #2d2d2d;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.project {
+  padding-top: 50px;
+  min-height: 1000px;
+  background-color: #d8d8d8;
+  margin: 0;
+  width: 100%;
+  float: left;
+  color: #2d2d2d;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f2f2f2;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 100%;
+  float: left;
+}
+
+.footer-text {
+  padding-top: 10px;
+  color: #aaaaaa;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row {
+
 }
