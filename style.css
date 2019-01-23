@@ -30,12 +30,11 @@ ul li a {
 }
 
 ul li a:hover {
-  color:red;
+  color: red;
   transition: .5s;
 }
-body {
 
-}
+body {}
 
 .left-bar {
   float: left;
@@ -58,7 +57,7 @@ body {
 }
 
 footer {
-  background-color:rgb(245,245,245);
+  background-color: rgb(245, 245, 245);
   color: black;
   position: relative;
   bottom: 0;
@@ -87,7 +86,7 @@ h1 a {
 h1 a:hover {
   text-decoration: none;
   color: red;
-    transition: .5s;
+  transition: .5s;
 }
 
 a {
@@ -97,7 +96,7 @@ a {
 a:hover {
   color: black;
   text-decoration: none;
-    transition: .5s;
+  transition: .5s;
 }
 
 .email-link {
@@ -107,5 +106,9 @@ a:hover {
 .email-link:hover {
   color: red;
   text-decoration: none;
-    transition: .5s;
+  transition: .5s;
+}
+
+.card {
+  box-shadow: 8px 8px 10px black;
 }
