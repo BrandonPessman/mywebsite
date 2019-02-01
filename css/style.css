@@ -17,7 +17,7 @@ h2 {
 }
 
 p {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 ul li a {
@@ -33,8 +33,6 @@ ul li a:hover {
   color: red;
   transition: .5s;
 }
-
-body {}
 
 .left-bar {
   float: left;
@@ -111,4 +109,8 @@ a:hover {
 
 .card {
   box-shadow: 8px 8px 10px black;
+}
+
+ol li {
+  font-size: 24px;
 }
