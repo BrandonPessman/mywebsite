@@ -45,13 +45,13 @@ class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/feedback">Home</NavLink>
+                <NavLink href="#">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/feedback">Projects</NavLink>
+                <NavLink href="#projects">Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/feedback">Blog</NavLink>
+                <NavLink href="#feedback">Blog</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

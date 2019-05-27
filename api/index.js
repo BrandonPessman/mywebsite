@@ -3,20 +3,22 @@ var express = require('express')
 var app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
-const axios = require('axios')
+var bodyParser = require('body-parser')
+const CircularJSON = require('circular-json')
 
 const bcrypt = require('bcrypt')
 const saltRounds = 10
 
 app.use(cors())
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 // For the .env Files
 require('dotenv').config()
-
-// MongoDB Models
-var BlogPost = require('./models/Blogpost')
-var User = require('./models/User')
-var Project = require('./models/Project')
 
 // MongoDB URL
 const dbRoute =
@@ -45,133 +47,73 @@ db.on(
 
 /* ____BLOG POST____ */
 app.get('/blogpost', (req, res) => {
-  BlogPost.find({}, (error, blogpost) => {
-    if (error) {
-      console.log('Blog Post: An Error has been thrown in GET')
-      return
-    }
+  db.collection('blogpost')
+    .find({})
+    .toArray(function(err, result) {
+      if (err) throw err
+      res.send(CircularJSON.stringify(result))
+    })
 
-    res.json({ data: blogpost })
-  })
+  console.log('[MongoDB]\t|\tFIND from BLOGPOST is SUCCESSFUL')
 })
 
 app.post('/blogpost', (req, res) => {
-  var blogPost = new BlogPost({
-    id: req.body.id,
-    author: req.body.author,
-    title: req.body.title,
-    body: req.body.body,
-    date: req.body.date,
-  })
-
-  blogPost.save(error => {
-    if (error) {
-      console.log('Blog Post: An Error has been thrown in POST')
-      return
-    }
-
-    res.json(blogPost)
-  })
+  db.collection('blogpost')
+    .insertOne({
+      id: req.body.id,
+      title: req.body.title,
+      body: req.body.body,
+      date: req.body.date,
+      image: req.body.image,
+    })
+    .then(() => {
+      console.log('[MongoDB]\t|\tINSERT into BLOGPOST is SUCCESSFUL')
+    })
 })
 
 app.get('/blogpost/:id', (req, res) => {
-  BlogPost.findById(req.params.id, (error, blogpost) => {
-    if (error) {
-      console.log('Blog Post: An Error has been thrown in GET with :id')
-      return
-    }
-
-    res.status(200).json({ data: blogpost })
+  db.collection('BlogPosts').findById(req.params.id, (error, blogpost) => {
+    console.log('Test')
   })
 })
 
 /* ____USER____ */
-app.get('/user', (req, res) => {
-  User.find({}, (error, user) => {
-    if (error) {
-      console.log('User: An Error has been thrown in GET')
-      return
-    }
+app.get('/user', (req, res) => {})
 
-    res.json({ data: user })
-  })
-})
-
-app.get('/user/:id', (req, res) => {
-  User.findById(req.params.username, (error, user) => {
-    if (error) {
-      console.log('User: An Error has been thrown in GET with :id')
-      return
-    }
-
-    res.status(200).json({ data: user })
-  })
-})
+app.get('/user/:id', (req, res) => {})
 
 /* ____LOGIN____ */
-app.get('/login', (req, res) => {
-  User.findById(req.params.username, (error, user) => {
-    if (error) {
-      console.log('Login: An Error has been thrown in GET with :id')
-      return
-    }
-
-    console.log('Client Logged In')
-    res.json({ data: user })
-  })
-})
+app.get('/login', (req, res) => {})
 
 /* ____REGISTER____ */
-app.post('/register', (req, res) => {
-  var user = new User({
-    id: req.body.id,
-    username: req.body.author,
-    password: req.body.title,
-    email: req.body.body,
-    date: req.body.date,
-    security_level: 1,
-  })
-
-  User.save(error => {
-    if (error) {
-      console.log('Register: An Error has been thrown in POST')
-      return
-    }
-
-    res.json(user)
-  })
-})
+app.post('/register', (req, res) => {})
 
 /* ____PROJECT____ */
 app.get('/projects', (req, res) => {
-  Project.find({}, (error, project) => {
-    if (error) {
-      console.log('Projects: An Error has been thrown in GET')
-      return
-    }
+  db.collection('projects')
+    .find({})
+    .toArray(function(err, result) {
+      if (err) throw err
+      res.send(CircularJSON.stringify(result))
+    })
 
-    res.json({ data: project })
-  })
+  console.log('[MongoDB]\t|\tFIND from PROJECTS is SUCCESSFUL')
 })
 
 app.post('/projects', (req, res) => {
-  console.log(req.body)
-  var project = new Project({
-    id: req.body.id,
-    title: req.body.title,
-    body: req.body.body,
-    date: req.body.date,
-    image: req.body.image,
-  })
-  /*
-  Project.save(error => {
-    if (error) {
-      console.log('Project: An Error has been thrown in POST')
-      return
-    }
-*/
-  // res.json(project)
-  // })
+  db.collection('projects')
+    .insertOne({
+      id: req.body.id,
+      title: req.body.title,
+      body: req.body.body,
+      date: req.body.date,
+      image: req.body.image,
+      githubURL: req.body.githubURL,
+      liveURL: req.body.liveURL,
+    })
+    .then(() => {
+      console.log('[MongoDB]\t|\tINSERT into PROJECTS is SUCCESSFUL')
+    })
 })
 
 // Listen
