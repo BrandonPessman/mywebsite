@@ -1,0 +1,23 @@
+:root {
+  --accent-text: rgb(52, 136, 233);
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
+.navbar {
+  background-color: white !important;
+}
+
+.avatar {
+  border: 8px solid white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  box-shadow: 0px 0px 0px black;
+}
+
+.accent-text {
+  color: var(--accent-text);
+}
