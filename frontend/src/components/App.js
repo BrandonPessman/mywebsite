@@ -14,6 +14,10 @@ import {
 } from 'reactstrap'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Home'
+import Blog from './Blog'
+import Projects from './Projects'
+import Login from './Login'
+import Footer from './Footer'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -38,20 +42,20 @@ export default class App extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="">PROJECTS</NavLink>
+                <NavLink href="/">HOME</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">BLOG</NavLink>
+                <NavLink href="/projects">PROJECTS</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">RESUME</NavLink>
+                <NavLink href="/blog">BLOG</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   ACCOUNT
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>LOGIN</DropdownItem>
+                  <DropdownItem href="/login">LOGIN</DropdownItem>
                   <DropdownItem>REGISTER</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>LOGOUT</DropdownItem>
@@ -63,8 +67,12 @@ export default class App extends React.Component {
 
         <Router>
           <Route path="/" exact component={Home} />
-          <Route path="/about/" component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/login" component={Login} />
         </Router>
+
+        <Footer />
       </div>
     )
   }

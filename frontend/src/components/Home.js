@@ -46,25 +46,25 @@ export default class Home extends React.Component {
               <h4>
                 <strong>Contact</strong>
               </h4>
-              <a href="/" target="_blank">
+              <a className="accent-text" href="/" target="_blank">
                 LinkedIn
               </a>
               <br />
-              <a href="/" target="_blank">
+              <a className="accent-text" href="/" target="_blank">
                 GitHub
               </a>
               <br />
-              <a href="/" target="_blank">
+              <a className="accent-text" href="/" target="_blank">
                 Facebook
               </a>
               <br />
 
-              <a href="/" target="_blank">
+              <a className="accent-text" href="/" target="_blank">
                 Twitter
               </a>
               <br />
 
-              <a href="/" target="_blank">
+              <a className="accent-text" href="/" target="_blank">
                 Email
               </a>
             </Col>
