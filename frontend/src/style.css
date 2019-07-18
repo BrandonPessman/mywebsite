@@ -1,16 +1,3 @@
-:root {
-  --accent-text: blue;
-}
-
-.nav-link:hover {
-  color: var(--accent-text) !important;
-  transition: 0.4s;
-}
-
-.navbar {
-  box-shadow: 0px 0px 0px black;
-}
-
 .jumbotron {
   box-shadow: 0px 0px 0px black;
 }
@@ -25,26 +12,35 @@
 }
 
 .accent-text {
-  color: var(--accent-text);
-}
-
-a.accent-text:hover {
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.card {
-  margin-bottom: 100px;
-  width: 800px;
-  box-shadow: -1px 9px 20px -12px rgba(0, 0, 0, 0.65);
-  transition: 0.4s;
-}
-
-.card:hover {
-  box-shadow: -1px 9px 35px -12px rgba(0, 0, 0, 0.75);
-  transition: 0.4s;
+  color: red;
 }
 
 .footbar {
   height: 300px;
+}
+
+.logo {
+  color: white !important;
+  float: left;
+}
+
+.dropdown-item:active {
+  background-color: white !important;
+}
+
+.underline {
+  border-bottom: 3px solid white;
+}
+
+.row {
+  width: 100%;
+}
+
+.mypicture {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+a:hover {
+  color: #9fa8da !important;
 }
