@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 
@@ -8,7 +8,6 @@ import Icon from '@mdi/react'
 import { mdiGithubFace } from '@mdi/js'
 import { mdiLinkedin } from '@mdi/js'
 import { mdiTwitter } from '@mdi/js'
-import { mdiDiscord } from '@mdi/js'
 import { mdiGmail } from '@mdi/js'
 
 import Me from '../../images/ProfileLarge.jpg'
@@ -112,7 +111,7 @@ export default function About() {
                 </Grid>
                 <Grid item xs={3}>
                   <p style={{ margin: 0 }}>
-                    <strong>Phone</strong>
+                    <strong>Discord Username</strong>
                   </p>
                 </Grid>
                 <Grid item xs={9}>
@@ -123,7 +122,7 @@ export default function About() {
                       fontWeight: '100',
                     }}
                   >
-                    (262) 888-2084
+                    Brandon | Braymen#0001
                   </p>
                 </Grid>
                 <Grid item xs={3}>
@@ -164,7 +163,7 @@ export default function About() {
           </Grid>
         </div>
         <Paper className={classes.root} style={{ textAlign: 'center' }}>
-          <a href="/">
+          <a href="https://github.com/brandonpessman">
             <Icon
               path={mdiGithubFace}
               title="User Profile"
@@ -176,7 +175,7 @@ export default function About() {
               style={{ margin: '40px' }}
             />
           </a>
-          <a href="/">
+          <a href="https://www.linkedin.com/in/brandonpessman/">
             <Icon
               path={mdiLinkedin}
               title="User Profile"
@@ -188,19 +187,7 @@ export default function About() {
               style={{ margin: '40px' }}
             />
           </a>
-          <a href="/">
-            <Icon
-              path={mdiDiscord}
-              title="User Profile"
-              size={1}
-              horizontal
-              vertical
-              rotate={180}
-              color="white"
-              style={{ margin: '40px' }}
-            />
-          </a>
-          <a href="/">
+          <a href="https://twitter.com/BrandonPessman">
             <Icon
               path={mdiTwitter}
               title="User Profile"
@@ -212,7 +199,7 @@ export default function About() {
               style={{ margin: '40px' }}
             />
           </a>
-          <a href="/">
+          <a href="mailto:pessman.brandon@gmail.com">
             <Icon
               path={mdiGmail}
               title="User Profile"

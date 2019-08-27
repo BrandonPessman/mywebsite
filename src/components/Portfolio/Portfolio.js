@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Grid from './components/Grid'
 
 export default class Portfolio extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class Portfolio extends Component {
         >
           Portfolio
         </h1>
+        <Grid />
       </div>
     )
   }
