@@ -13,6 +13,7 @@ import Col from 'react-bootstrap/Col'
 // import Innovation from './images/innovation.png'
 // import Travelers from './images/travelers.jpeg'
 //
+//
 function App () {
   return (
     <div>
