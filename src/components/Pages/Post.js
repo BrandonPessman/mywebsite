@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
+const ReactMarkdown = require('react-markdown')
 
 export default function Post () {
   const [author, setAuthor] = useState('')
@@ -47,7 +48,7 @@ export default function Post () {
         </center>
       </Jumbotron>
       <Container>
-        <h5>{body}</h5>
+      <ReactMarkdown source={body} />
       </Container>
     </div>
   )

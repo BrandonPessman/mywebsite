@@ -16,7 +16,9 @@ function App () {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mr-auto'>
-            {/* <Nav.Link href='/'>Blog</Nav.Link> */}
+            <Nav.Link href='/'>Blog</Nav.Link>
+            <Nav.Link href='/'>Projects</Nav.Link>
+            <Nav.Link href='/'>Technologies & Experiences</Nav.Link>
             {/* <NavDropdown title='Projects' id='collasible-nav-dropdown'>
               <NavDropdown.Item href='/'></NavDropdown.Item>
             </NavDropdown> */}

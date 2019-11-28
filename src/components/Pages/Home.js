@@ -27,12 +27,16 @@ export default class Home extends React.Component {
             <div key={i}>
               <Card style={{ marginBottom: '10px' }}>
                 <Card.Body>
-                  <Card.Title>{data[i].title.toUpperCase()}</Card.Title>
+                  <Card.Title>
+                    <Card.Link href={'/post/' + data[i]._id}>
+                      {data[i].title.toUpperCase()}
+                    </Card.Link>
+                  </Card.Title>
                   <Card.Subtitle className='mb-2 text-muted'>
                     {ts.toDateString()}
                   </Card.Subtitle>
-                  <Card.Text>{data[i].body.substring(0, 300)}</Card.Text>
-                  <Card.Link href={'/post/' + data[i]._id}>Read More</Card.Link>
+                  {/* <Card.Text>{data[i].body.substring(0, 300)}</Card.Text> */}
+                  {/* <Card.Link href={'/post/' + data[i]._id}>Read More</Card.Link> */}
                 </Card.Body>
               </Card>
             </div>
