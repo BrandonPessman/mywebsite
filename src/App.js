@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav'
 
 import Home from './components/Pages/Home'
 import Post from './components/Pages/Post'
+import Login from './components/Pages/Login'
 
 function App () {
   return (
@@ -25,13 +26,16 @@ function App () {
           </Nav>
           <Nav>
             <Nav.Link href='/'>New Post</Nav.Link>
-            <Nav.Link href='/'>Login</Nav.Link>
+            <Nav.Link href='/login'>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
 
       <Router>
         <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
           <Route path='/post/:id'>
             <Post />
           </Route>
