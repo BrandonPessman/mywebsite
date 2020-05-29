@@ -10,6 +10,8 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Badge from 'react-bootstrap/Badge'
 
+import Octicon, { Star, RepoForked, Eye } from '@primer/octicons-react'
+
 function Projects () {
   const [projects, setProjects] = useState(null)
 
@@ -37,25 +39,74 @@ function Projects () {
         <Row>
           {projects != null
             ? projects.map(project => {
-                return (
+                return !project.fork ? (
                   <Col key={project.id} sm={4}>
-                    <div className={styles.projectContainer}>
-                      <h1 className={styles.header1}>{project.name}</h1>
-                      <h2 className={styles.header2}>{project.description}</h2>
-                      {/* <Button className={styles.sourceButton} variant='primary'>
+                    <a
+                      href={project.html_url}
+                      style={{ color: 'inherit', textDecoration: 'none' }}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <div className={styles.projectContainer}>
+                        <h1 className={styles.header1}>{project.name}</h1>
+                        <h2 className={styles.header2}>
+                          {project.description}
+                        </h2>
+                        {/* <Button className={styles.sourceButton} variant='primary'>
                         Source Code
                       </Button>{' '}
                       <Button className={styles.liveButton} variant='primary'>
                         Live Demo
                       </Button> */}
-                      <div className={styles.languages}>
-                        <Badge
-                          className={styles.languageBadge}
-                          variant='primary'
-                        ></Badge>
+                        <div className={styles.languages}>
+                          <span
+                            style={{
+                              margin: '0 5px',
+                              fontSize: '13px',
+                              fontWeight: '600',
+                              color: '#FF6A00'
+                            }}
+                          >
+                            {project.stargazers_count} <Octicon icon={Star} />
+                          </span>
+                          <span
+                            style={{
+                              margin: '0 5px',
+                              fontSize: '13px',
+                              fontWeight: '600'
+                            }}
+                          >
+                            {project.forks_count} <Octicon icon={RepoForked} />
+                          </span>
+                          <span
+                            style={{
+                              margin: '0 5px',
+                              fontSize: '13px',
+                              fontWeight: '600'
+                            }}
+                          >
+                            {project.watchers_count} <Octicon icon={Eye} />
+                          </span>
+                          <span
+                            style={{
+                              margin: '0 5px',
+                              fontSize: '13px',
+                              fontWeight: '600'
+                            }}
+                          >
+                            <Badge
+                              className={styles.languageBadge}
+                              variant='primary'
+                            >
+                              {project.language}
+                            </Badge>
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   </Col>
+                ) : (
+                  ''
                 )
               })
             : ''}
