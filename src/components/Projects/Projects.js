@@ -97,6 +97,7 @@ function Projects () {
                             <Badge
                               className={styles.languageBadge}
                               variant='primary'
+                              style={{ color: 'white !important' }}
                             >
                               {project.language}
                             </Badge>
