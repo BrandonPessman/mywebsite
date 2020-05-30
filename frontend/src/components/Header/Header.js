@@ -15,11 +15,15 @@ function Header () {
       <Container className={styles.container}>
         <Row>
           <Col sm={6}>
-            <h1 className={styles.header1}>Hi There!</h1>
+            <h1 className={styles.header1}>Fullstack Web Developer</h1>
             <h2 className={styles.header2}>
               I'm Brandon and I'm a Fullstack Web Developer.
             </h2>
-            <Button className={styles.hireButton} variant='primary'>
+            <Button
+              className={styles.hireButton}
+              variant='primary'
+              href='#contact'
+            >
               Hire Me!
             </Button>
           </Col>

@@ -25,7 +25,7 @@ function Projects () {
   }, [])
 
   return (
-    <div>
+    <div id='projects'>
       <Container>
         <h1
           style={{

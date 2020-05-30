@@ -21,14 +21,14 @@ function App () {
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mr-auto' />
           <Nav>
-            <Nav.Link className={styles.navigationLink} href='#'>
-              About
-            </Nav.Link>
-            <Nav.Link className={styles.navigationLink} href='#'>
+            <Nav.Link className={styles.navigationLink} href='#projects'>
               Projects
             </Nav.Link>
-            <Nav.Link className={styles.navigationLink} href='#'>
-              Contact
+            <Nav.Link className={styles.navigationLink} href='#songs'>
+              Songs
+            </Nav.Link>
+            <Nav.Link className={styles.navigationLink} href='#contact'>
+              Hire Me
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
